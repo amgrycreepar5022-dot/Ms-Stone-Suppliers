@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MS Stone Suppliers - Premium Sandstone, Marbles & Blocks</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Playfair Display & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        stone: {
+                            50: '#faf9f6',
+                            100: '#f4f1eb',
+                            200: '#e7e1d3',
+                            600: '#8c7662',
+                            800: '#4a3e3d',
+                            900: '#2d2424',
+                        },
+                        terracotta: {
+                            50: '#fdf6f4',
+                            500: '#c85c40',
+                            600: '#b24c32',
+                            700: '#943b25',
+                        },
+                        amber: {
+                            500: '#d97706',
+                            600: '#b45309',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .custom-gradient {
+            background: linear-gradient(135deg, #2d2424 0%, #4a3e3d 100%);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+    </style>
+</head>
+<body class="bg-stone-50 font-sans text-stone-900 overflow-x-hidden">
+
+    <!-- Top Contact Bar -->
+    <div class="bg-stone-900 text-stone-100 py-2.5 px-4 sm:px-6 lg:px-8 text-xs sm:text-sm flex flex-col sm:flex-row justify-between items-center gap-2 border-b border-stone-800">
+        <div class="flex flex-wrap justify-center sm:justify-start items-center gap-4">
+            <a href="tel:9413108016" class="flex items-center space-x-1.5 hover:text-terracotta-500 transition-colors">
+                <i class="fas fa-phone-alt text-terracotta-500"></i>
+                <span class="font-medium">+91 9413108016</span>
+            </a>
+            <span class="hidden md:inline text-stone-700">|</span>
+            <a href="mailto:ms.stone8016@gmail.com" class="flex items-center space-x-1.5 hover:text-terracotta-500 transition-colors">
+                <i class="fas fa-envelope text-terracotta-500"></i>
+                <span class="font-medium">ms.stone8016@gmail.com</span>
+            </a>
+        </div>
+        <div class="flex items-center space-x-4">
+            <span class="hidden lg:inline text-stone-400 font-medium" data-i18n="header-tag">Premium Sandstone, Marbles & Red Stone Blocks</span>
+            <!-- Language Switcher Button -->
+            <button onclick="toggleLanguage()" class="flex items-center space-x-2 bg-stone-800 hover:bg-stone-700 px-3.5 py-1 rounded-full border border-stone-700 transition-all text-xs font-semibold">
+                <i class="fas fa-globe text-terracotta-500"></i>
+                <span id="langText">हिन्दी में देखें</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Main Navigation Header -->
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md shadow-md transition-all">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo & Business Name -->
+                <div class="flex items-center space-x-3">
+                    <div class="bg-terracotta-600 text-white p-2.5 rounded-lg shadow-md flex items-center justify-center">
+                        <svg class="w-8 h-8" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15 35L50 15L85 35V65L50 85L15 65V35Z" fill="#C85C40" stroke="white" stroke-width="4"/>
+                            <path d="M15 35L50 55L85 35" stroke="white" stroke-width="4"/>
+                            <path d="M50 55V85" stroke="white" stroke-width="4"/>
+                            <path d="M30 43.5L41.5 50" stroke="white" stroke-width="2"/>
+                            <path d="M70 43.5L58.5 50" stroke="white" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <span class="block text-2xl font-serif font-bold tracking-tight text-stone-900 leading-none">M.S. STONE</span>
+                        <span class="block text-xs uppercase tracking-widest text-terracotta-600 font-semibold mt-1" data-i18n="logo-sub">Suppliers & Slabs Cutter</span>
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation Menu -->
+                <nav class="hidden md:flex space-x-6 lg:space-x-8 text-sm font-semibold text-stone-800">
+                    <a href="#home" class="hover:text-terracotta-500 transition-colors" data-i18n="nav-home">Home</a>
+                    <a href="#stones" class="hover:text-terracotta-500 transition-colors" data-i18n="nav-stones">Stone Range</a>
+                    <a href="#about" class="hover:text-terracotta-500 transition-colors" data-i18n="nav-about">About Us</a>
+                    <a href="#gallery" class="hover:text-terracotta-500 transition-colors" data-i18n="nav-gallery">Stone Gallery</a>
+                    <a href="#calculator" class="hover:text-terracotta-500 transition-colors" data-i18n="nav-calc">Slab Estimator</a>
+                    <a href="#contact" class="hover:text-terracotta-500 transition-colors" data-i18n="nav-contact">Contact</a>
+                </nav>
+
+                <!-- Call to Action Button -->
+                <div class="hidden lg:flex items-center">
+                    <a href="https://wa.me/919413108016?text=Hello%20Guman%20Singh%20ji,%20I%20am%20interested%20in%20your%20Premium%20Stones%20and%20Slabs." target="_blank" class="bg-terracotta-600 hover:bg-terracotta-700 text-white px-5 py-2.5 rounded-lg shadow-md hover:shadow-lg transition-all transform hover:-translate-y-0.5 flex items-center space-x-2 text-sm font-bold">
+                        <i class="fab fa-whatsapp text-lg"></i>
+                        <span data-i18n="cta-whatsapp">WhatsApp Chat</span>
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="mobileMenuBtn" class="text-stone-800 hover:text-terracotta-600 focus:outline-none focus:ring-2 focus:ring-terracotta-500 p-2 rounded-md">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white border-t border-stone-100 py-4 px-6 space-y-3 shadow-inner">
+            <a href="#home" onclick="closeMobileMenu()" class="block text-stone-800 hover:text-terracotta-600 font-medium py-2 border-b border-stone-50" data-i18n="nav-home">Home</a>
+            <a href="#stones" onclick="closeMobileMenu()" class="block text-stone-800 hover:text-terracotta-600 font-medium py-2 border-b border-stone-50" data-i18n="nav-stones">Stone Range</a>
+            <a href="#about" onclick="closeMobileMenu()" class="block text-stone-800 hover:text-terracotta-600 font-medium py-2 border-b border-stone-50" data-i18n="nav-about">About Us</a>
+            <a href="#gallery" onclick="closeMobileMenu()" class="block text-stone-800 hover:text-terracotta-600 font-medium py-2 border-b border-stone-50" data-i18n="nav-gallery">Our Stone Gallery</a>
+            <a href="#calculator" onclick="closeMobileMenu()" class="block text-stone-800 hover:text-terracotta-600 font-medium py-2 border-b border-stone-50" data-i18n="nav-calc">Slab Estimator</a>
+            <a href="#contact" onclick="closeMobileMenu()" class="block text-stone-800 hover:text-terracotta-600 font-medium py-2" data-i18n="nav-contact">Contact</a>
+            
+            <div class="pt-4 flex flex-col space-y-3">
+                <a href="tel:9413108016" class="bg-stone-100 hover:bg-stone-200 text-stone-800 py-2.5 px-4 rounded-lg text-center font-bold flex items-center justify-center space-x-2">
+                    <i class="fas fa-phone-alt text-terracotta-600"></i>
+                    <span>Call +91 9413108016</span>
+                </a>
+                <a href="https://wa.me/919413108016" target="_blank" class="bg-terracotta-600 hover:bg-terracotta-700 text-white py-2.5 px-4 rounded-lg text-center font-bold flex items-center justify-center space-x-2">
+                    <i class="fab fa-whatsapp"></i>
+                    <span data-i18n="cta-whatsapp">WhatsApp Chat</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Banner -->
+    <section id="home" class="relative overflow-hidden bg-stone-900 text-white pt-20 pb-24 md:pt-32 md:pb-36">
+        <div class="absolute inset-0 opacity-15 mix-blend-overlay">
+            <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+                        <path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" stroke-width="1"/>
+                    </pattern>
+                </defs>
+                <rect width="100%" height="100%" fill="url(#grid)" />
+            </svg>
+        </div>
+        
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-terracotta-600/10 blur-[120px] rounded-full pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <!-- Hero Text -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center space-x-2 bg-stone-800/80 border border-stone-700 px-3 py-1.5 rounded-full text-xs sm:text-sm font-semibold tracking-wide text-terracotta-400">
+                        <span class="w-2.5 h-2.5 bg-green-500 rounded-full animate-ping"></span>
+                        <span data-i18n="hero-tag">Best Sandstone & Marble Manufacturers in India</span>
+                    </div>
+                    
+                    <h1 class="text-4xl sm:text-5xl md:text-6xl font-serif font-extrabold tracking-tight leading-tight text-stone-50">
+                        <span data-i18n="hero-heading-1">Premium Slabs & Massive</span> 
+                        <span class="block text-transparent bg-clip-text bg-gradient-to-r from-terracotta-500 to-amber-500" data-i18n="hero-heading-2">Stone Block Processing</span>
+                    </h1>
+                    
+                    <p class="text-base sm:text-lg md:text-xl text-stone-300 font-light leading-relaxed max-w-2xl mx-auto lg:mx-0" data-i18n="hero-desc">
+                        Under the expert direction of Guman Singh, MS Stone Suppliers operates high-precision block cutting plants in Pindwara, Rajasthan, dealing in premium Red Stone, Pink Stone, Marbles, Jodhpur Stones, and Jaisalmer Sandstones.
+                    </p>
+
+                    <!-- Quick Highlights Grid -->
+                    <div class="grid grid-cols-3 gap-4 pt-4 max-w-lg mx-auto lg:mx-0 text-left">
+                        <div class="border-l-2 border-terracotta-500 pl-3">
+                            <span class="block text-xl sm:text-2xl font-serif font-bold text-white">Sirohi Rd</span>
+                            <span class="text-[10px] sm:text-xs text-stone-400 font-medium uppercase tracking-wider" data-i18n="badge-1">Pindwara, RIICO</span>
+                        </div>
+                        <div class="border-l-2 border-terracotta-500 pl-3">
+                            <span class="block text-xl sm:text-2xl font-serif font-bold text-white">Full Range</span>
+                            <span class="text-[10px] sm:text-xs text-stone-400 font-medium uppercase tracking-wider" data-i18n="badge-2">Marbles & Sandstone</span>
+                        </div>
+                        <div class="border-l-2 border-terracotta-500 pl-3">
+                            <span class="block text-xl sm:text-2xl font-serif font-bold text-white">Nationwide</span>
+                            <span class="text-[10px] sm:text-xs text-stone-400 font-medium uppercase tracking-wider" data-i18n="badge-3">Safe Delivery</span>
+                        </div>
+                    </div>
+
+                    <div class="pt-6 flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
+                        <a href="#calculator" class="bg-terracotta-600 hover:bg-terracotta-700 text-white font-bold py-4 px-8 rounded-xl shadow-lg transition-all text-center flex items-center justify-center space-x-3 transform hover:-translate-y-1">
+                            <i class="fas fa-calculator text-lg"></i>
+                            <span data-i18n="btn-calc">Calculate Slab Estimations</span>
+                        </a>
+                        <a href="tel:9413108016" class="bg-stone-800 hover:bg-stone-700 border border-stone-700 text-white font-bold py-4 px-8 rounded-xl transition-all text-center flex items-center justify-center space-x-2 hover:border-stone-500">
+                            <i class="fas fa-phone-alt text-terracotta-500"></i>
+                            <span data-i18n="btn-call">Call +91 9413108016</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Featured Hero Carousel / Showcase -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative bg-stone-800 border-4 border-stone-700 rounded-2xl overflow-hidden shadow-2xl group">
+                        <!-- Hero main image -->
+                        <img id="heroImage" src="IMG-20260625-WA0014.jpg" alt="Premium Sandstone Temple Structure" class="w-full h-[28rem] sm:h-[32rem] object-cover object-center transition-all duration-700 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-gradient-to-t from-stone-950 via-transparent to-transparent"></div>
+                        
+                        <!-- Floating Text Overlay for current slide -->
+                        <div class="absolute bottom-0 left-0 right-0 p-6 text-left">
+                            <span class="bg-terracotta-600 text-white text-xs uppercase px-2.5 py-1 rounded font-bold tracking-wider" data-i18n="featured-work-badge">Our Premium Execution</span>
+                            <h3 id="heroCaption" class="text-xl font-serif font-bold text-white mt-2" data-i18n="featured-work-title">Beautifully Hand-Carved Traditional Gazebo (Chhatri)</h3>
+                            <p class="text-xs text-stone-300 mt-1" data-i18n="featured-work-desc">Made from our premium handpicked pink/red block sandstone.</p>
+                        </div>
+                    </div>
+
+                    <!-- Slide Controller Indicators -->
+                    <div class="flex justify-center space-x-3 mt-4">
+                        <button onclick="changeHeroSlide('IMG-20260625-WA0014.jpg', 'Beautifully Hand-Carved Traditional Gazebo (Chhatri)')" class="w-12 h-1.5 bg-terracotta-500 rounded-full focus:outline-none"></button>
+                        <button onclick="changeHeroSlide('IMG_20260625_204424.jpg', 'Massive Heavy Block Cutting Factory Area')" class="w-12 h-1.5 bg-stone-700 hover:bg-terracotta-400 rounded-full focus:outline-none transition-colors"></button>
+                        <button onclick="changeHeroSlide('IMG-20260625-WA0011.jpg', 'Premium Red Sandstone Finished Slabs Stack')" class="w-12 h-1.5 bg-stone-700 hover:bg-terracotta-400 rounded-full focus:outline-none transition-colors"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stones Variety Section -->
+    <section id="stones" class="py-20 bg-stone-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs uppercase tracking-widest text-terracotta-600 font-bold" data-i18n="stones-intro">Unmatched Inventory</span>
+                <h2 class="text-3xl sm:text-4xl font-serif font-bold text-stone-900 mt-2" data-i18n="stones-title">Complete Variety of Premium Marbles & Stones</h2>
+                <div class="w-20 h-1 bg-terracotta-600 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+                <!-- Red Stone -->
+                <div class="bg-white border border-stone-200 rounded-2xl p-6 text-center shadow-sm hover:shadow-lg transition-all duration-300">
+                    <div class="w-16 h-16 bg-red-800 rounded-full flex items-center justify-center mx-auto mb-4 text-white text-2xl shadow-inner">
+                        <i class="fas fa-mountain"></i>
+                    </div>
+                    <h3 class="font-serif font-bold text-lg text-stone-900" data-i18n="st-red-t">Premium Red Stone</h3>
+                    <p class="text-xs text-stone-500 mt-2" data-i18n="st-red-d">Excellent quality durable block and slabs, extensively processed in our unit.</p>
+                </div>
+
+                <!-- Pink Stone -->
+                <div class="bg-white border border-stone-200 rounded-2xl p-6 text-center shadow-sm hover:shadow-lg transition-all duration-300">
+                    <div class="w-16 h-16 bg-pink-400 rounded-full flex items-center justify-center mx-auto mb-4 text-white text-2xl shadow-inner">
+                        <i class="fas fa-layer-group"></i>
+                    </div>
+                    <h3 class="font-serif font-bold text-lg text-stone-900" data-i18n="st-pink-t">Terracotta Pink Stone</h3>
+                    <p class="text-xs text-stone-500 mt-2" data-i18n="st-pink-d">Classic, heat-insulated, breathtaking pink hues for magnificent monuments.</p>
+                </div>
+
+                <!-- Marbles -->
+                <div class="bg-white border border-stone-200 rounded-2xl p-6 text-center shadow-sm hover:shadow-lg transition-all duration-300">
+                    <div class="w-16 h-16 bg-stone-100 border border-stone-300 rounded-full flex items-center justify-center mx-auto mb-4 text-stone-700 text-2xl shadow-inner">
+                        <i class="fas fa-gem"></i>
+                    </div>
+                    <h3 class="font-serif font-bold text-lg text-stone-900" data-i18n="st-marble-t">High-Grade Marbles</h3>
+                    <p class="text-xs text-stone-500 mt-2" data-i18n="st-marble-d">Extremely luxury slabs of strong native marbles for glorious home floorings.</p>
+                </div>
+
+                <!-- Jodhpur Stone -->
+                <div class="bg-white border border-stone-200 rounded-2xl p-6 text-center shadow-sm hover:shadow-lg transition-all duration-300">
+                    <div class="w-16 h-16 bg-amber-600 rounded-full flex items-center justify-center mx-auto mb-4 text-white text-2xl shadow-inner">
+                        <i class="fas fa-monument"></i>
+                    </div>
+                
